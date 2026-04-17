@@ -239,8 +239,11 @@ let connectDB = async () => {
 }
 
 
-server.listen(process.env.PORT, () => {
-    // console.log(`http://${process.env.VITE_BACKEND_URI}:${process.env.PORT}`);
-    console.log(`server running port : ${process.env.PORT}`);
-    connectDB();
+// Server start
+const PORT = process.env.PORT || 5000;
+
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`server running port: ${PORT}`);
+  });
 });
