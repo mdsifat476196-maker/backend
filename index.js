@@ -36,11 +36,7 @@ let userMessageSchema = new mongoose.Schema({
 let messageModel = mongoose.model("messages", userMessageSchema);
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-   "https://frontend-zi4e.vercel.app"
-  ],
-  credentials: true
+  origin: "*"
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
