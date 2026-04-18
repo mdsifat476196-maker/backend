@@ -38,7 +38,7 @@ let messageModel = mongoose.model("messages", userMessageSchema);
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://your-frontend.vercel.app"
+   "https://frontend-zi4e.vercel.app"
   ],
   credentials: true
 }));
