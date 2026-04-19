@@ -23,7 +23,7 @@ let userSchema = new mongoose.Schema({
     email: String,
     password: String,
     profilePic: String
-}, { timeStamps: true });
+}, { timestamps: true });
 
 let userModel = mongoose.model("users", userSchema);
 
